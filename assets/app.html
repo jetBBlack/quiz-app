@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Quiz-App</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        <div class="input_box">
+            <input type="text" placeholder="Enter your name" id="nameTxt">
+        </div>
+        <div class="start_btn">
+            <button>Start Quiz</button>
+        </div>
+
+        <div class="info_box">
+            <div class="info_title">
+                <span>Some Rules of Quiz</span>
+            </div>
+            <div class="info_list">
+                <div class="info">1. You will have only <span>30 seconds</span> per each question.</div>
+                <div class="info">2. Once you select your answer, you can't reselect.</div>
+                <div class="info">3. You will get <span>10 points</span> if your answer is correct.</div>
+                <div class="info">4. After select your answer, click next to continue.</div>
+                <div class="info">5. Good luck & Have fun.</div>
+            </div>
+            <div class="buttons">
+                <button class="quit">Exit Quiz</button>
+                <button class="restart">Continue</button>
+            </div>
+        </div>
+        <!-- Quiz-Box -->
+        <div class="quiz_box">
+            <header>
+                <div class="title">
+                    Fun Quiz 
+                </div>
+                <div class="timer">
+                    <div class="time_text">Time left</div>
+                    <div class="timer_sec">30</div>
+                </div>
+                <div class="time_line">
+                    
+                </div>
+            </header>
+            <section>
+                <div class="que_text">
+                    <!-- <span>What country won the very first FIFA World Cup in 1930?</span> -->
+                </div>
+                <div class="option_list">
+                    <!-- <div class="option">
+                        <span>Uruguay</span>
+                        <div class="icon tick"><i class="fa fa-check"></i></div>
+                    </div>
+                    <div class="option">
+                        <span>Germany</span>
+                        <div class="icon cross"><i class="fa fa-times"></i></div>
+                    </div>
+                    <div class="option"><span>Argentina</span></div>
+                    <div class="option">
+                        <span>Swedden</span>
+                    </div> -->
+                </div>
+            </section>
+            <!-- Quiz-Box-Footer -->
+            <footer>
+                <div class="total_que">
+                    <!-- <span><p>2</p>of<p>5</p>Question</span> -->
+                    
+                </div>
+                <button class="next_btn">Next Question</button>
+            </footer>
+        </div>
+        <!-- Result-Box -->
+        <div class="result_box">
+            <div class="icon">
+                <i class="fas fa-crown"></i>
+            </div>
+            <div class="complete_text">You've complete this quiz</div>
+            <div class="score_text">
+                <!-- <span>and sorry, You got only <p>2</p>out of <p>5</p></span> -->
+            </div>
+            <div class="buttons">
+                <button class="restart">Replay Quiz</button>
+                <button class="quit">Quit Quiz</button>
+            </div>
+        </div>
+        <script src="js/question.js"></script>
+        <script src="js/handle.js"></script>
+    </body>
+</html>
