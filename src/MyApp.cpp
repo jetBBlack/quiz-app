@@ -5,7 +5,7 @@
 #define WINDOW_WIDTH  1280
 #define WINDOW_HEIGHT 720
 
-Question questions[10];
+Question questions[11];
 MyApp::MyApp() {
   ///
   /// Create our main App instance.
@@ -165,11 +165,13 @@ void MyApp::OnDOMReady(ultralight::View* caller,
   JSStringRef opt3 = JSStringCreateWithUTF8CString("opt3");
   JSStringRef opt4 = JSStringCreateWithUTF8CString("opt4");
   JSStringRef answer = JSStringCreateWithUTF8CString("answer");
- 
+  for (int32_t i = 0; i < 11; i++)
+  {
+    questions[i].setObjProperty(i);
+  }
+  shuffle_array(questions, 11);
   
   for (int32_t i = 0; i < 10; i++ ){
-    //questions[i].question = "What does CSS stand for?";
-    questions[i].setObjProperty(i);
     JSObjectRef myObj = JSObjectMake(ctx, NULL, NULL);
     JSObjectSetProperty(ctx, myObj, question, JSValueMakeString(ctx, JSStringCreateWithUTF8CString(questions[i].question.c_str())), kJSPropertyAttributeNone, NULL);
     JSObjectSetProperty(ctx, myObj, opt1, JSValueMakeString(ctx, JSStringCreateWithUTF8CString(questions[i].option1.c_str())), kJSPropertyAttributeNone, NULL);
